@@ -1,196 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Colotti Automation LLC | Industrial Automation & Controls</title>
+  <meta charset="UTF-8">
+  <title>Colotti Automation LLC | Industrial Automation & Controls</title>
+  <meta name="description" content="Colotti Automation LLC provides industrial automation support including PLC programming, robotics, pneumatics, troubleshooting, conveyors, and system design for manufacturing applications.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://colottiautomationllc.com">
 
-<meta name="description" content="Colotti Automation LLC provides industrial automation support including PLC programming, robotics, pneumatics, troubleshooting, and system design.">
+  <style>
+    *{
+      box-sizing:border-box;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="index, follow">
+    html{
+      scroll-behavior:smooth;
+    }
 
-<link rel="canonical" href="https://colottiautomationllc.com">
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#f4f6f8;
+      color:#1f2a44;
+      line-height:1.6;
+    }
 
-<style>
-body{
-  font-family: Arial, sans-serif;
-  margin:0;
-  background:#f4f6f8;
-  color:#1f2a44;
-}
+    .hero{
+      background:
+        radial-gradient(circle at top right, rgba(255,180,0,0.18), transparent 28%),
+        linear-gradient(135deg, #152238 0%, #1f2a44 45%, #2d4f7c 100%);
+      color:white;
+      padding:90px 20px 80px 20px;
+      position:relative;
+      overflow:hidden;
+    }
 
-.hero{
-  background:linear-gradient(135deg,#1f2a44,#2d4f7c);
-  color:white;
-  padding:70px 20px;
-  text-align:center;
-}
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:auto -120px -120px auto;
+      width:320px;
+      height:320px;
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:50%;
+    }
 
-.hero h1{
-  font-size:40px;
-  margin-bottom:10px;
-}
+    .hero::after{
+      content:"";
+      position:absolute;
+      top:-90px;
+      left:-90px;
+      width:240px;
+      height:240px;
+      border:1px solid rgba(255,255,255,0.07);
+      border-radius:50%;
+    }
 
-.hero p{
-  font-size:18px;
-  max-width:700px;
-  margin:0 auto 20px auto;
-}
+    .hero-content{
+      max-width:1120px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:34px;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
 
-.btn{
-  display:inline-block;
-  background:#ffb400;
-  color:#1f2a44;
-  padding:14px 24px;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-  margin-top:10px;
-}
+    .hero h1{
+      font-size:48px;
+      line-height:1.1;
+      margin:0 0 16px 0;
+    }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:30px 20px;
-}
+    .hero p{
+      font-size:19px;
+      max-width:720px;
+      margin:0 0 24px 0;
+      color:rgba(255,255,255,0.92);
+    }
 
-.section{
-  background:white;
-  padding:30px;
-  margin-bottom:25px;
-  border-radius:10px;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
+    .hero-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:20px;
+    }
 
-.section h2{
-  margin-top:0;
-}
+    .btn{
+      display:inline-block;
+      padding:14px 24px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.2s ease;
+      border:none;
+      cursor:pointer;
+      font-size:16px;
+    }
 
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
+    .btn-primary{
+      background:#ffb400;
+      color:#1f2a44;
+    }
 
-.card{
-  background:#f8fafc;
-  border:1px solid #ddd;
-  border-radius:10px;
-  padding:20px;
-}
+    .btn-primary:hover{
+      opacity:0.92;
+    }
 
-.cta{
-  text-align:center;
-  background:#1f2a44;
-  color:white;
-  padding:40px;
-  border-radius:10px;
-}
+    .btn-secondary{
+      background:transparent;
+      color:white;
+      border:2px solid rgba(255,255,255,0.78);
+    }
 
-footer{
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-  color:#666;
-}
-</style>
+    .btn-secondary:hover{
+      background:rgba(255,255,255,0.08);
+    }
+
+    .hero-panel{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:16px;
+      padding:24px;
+      backdrop-filter:blur(3px);
+    }
+
+    .hero-panel h3{
+      margin-top:0;
+      margin-bottom:14px;
+      font-size:22px;
+      color:white;
+    }
+
+    .hero-list{
+      margin:0;
+      padding-left:20px;
+      color:rgba(255,255,255,0.92);
+    }
+
+    .hero-list li{
+      margin-bottom:10px;
+    }
+
+    .container{
+      max-width:1180px;
+      margin:0 auto;
+      padding:34px 20px;
+    }
+
+    .section{
+      background:white;
+      border-radius:14px;
+      box-shadow:0 4px 18px rgba(0,0,0,0.08);
+      padding:34px;
+      margin-bottom:28px;
+    }
+
+    .section h2{
+      margin-top:0;
+      margin-bottom:15px;
+      font-size:32px;
+      color:#1f2a44;
+    }
+
+    .lead{
+      font-size:17px;
+      color:#445;
+      margin-bottom:0;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .info-visual{
+      min-height:280px;
+      border-radius:16px;
+      background:
+        linear-gradient(135deg, rgba(31,42,68,0.96), rgba(45,79,124,0.92));
+      color:white;
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .info-visual::before{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:180px;
+      right:-40px;
+      top:-40px;
+      border:1px solid rgba(255,255,255,0.10);
+      border-radius:50%;
+    }
+
+    .info-visual::after{
+      content:"";
+      position:absolute;
+      width:120px;
+      height:120px;
+      left:-30px;
+      bottom:-30px;
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:50%;
+    }
+
+    .info-visual .big{
+      font-size:42px;
+      font-weight:bold;
+      line-height:1;
+      margin-bottom:14px;
+    }
+
+    .info-visual .label{
+      font-size:18px;
+      margin-bottom:10px;
+    }
+
+    .info-visual p{
+      margin:0;
+      color:rgba(255,255,255,0.88);
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .service-card{
+      background:#f8fafc;
+      border:1px solid #d9e2ec;
+      border-radius:12px;
+      padding:22px;
+      height:100%;
+    }
+
+    .service-icon{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#1f2a44;
+      color:white;
+      font-size:25px;
+      margin-bottom:14px;
+    }
+
+    .service-card h3{
+      margin:0 0 10px 0;
+      font-size:22px;
+      color:#1f2a44;
+    }
+
+    .service-card p{
+      margin:0;
+      color:#444;
+      font-size:15px;
+    }
+
+    .application-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+      margin-top:20px;
+    }
+
+    .application-card{
+      border:1px solid #d9e2ec;
+      background:#f8fafc;
+      border-radius:12px;
+      padding:24px;
+    }
+
+    .application-top{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:12px;
+    }
+
+    .application-badge{
+      width:52px;
+      height:52px;
+      border-radius:12px;
+      background:#e8eef7;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+    }
+
+    .application-card h3{
+      margin:0;
+      font-size:21px;
+    }
+
+    .application-card p{
+      margin:0;
+      color:#444;
+      font-size:15px;
+    }
+
+    .highlight-box{
+      background:linear-gradient(135deg, #1f2a44, #2d4f7c);
+      color:white;
+      border-radius:14px;
+      padding:34px;
+      text-align:center;
+    }
+
+    .highlight-box h2{
+      color:white;
+      margin-top:0;
+    }
+
+    .highlight-box p{
+      max-width:760px;
+      margin:0 auto 20px auto;
+      font-size:17px;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+      margin-top:22px;
+    }
+
+    .stat{
+      background:rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:12px;
+      padding:18px;
+    }
+
+    .stat strong{
+      display:block;
+      font-size:28px;
+      margin-bottom:6px;
+    }
+
+    .tool-panels{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .tool-link-box{
+      background:#f8fafc;
+      border:1px solid #d9e2ec;
+      border-radius:12px;
+      padding:22px;
+    }
+
+    .tool-link-box a{
+      color:#2d4f7c;
+      font-weight:bold;
+      text-decoration:none;
+    }
+
+    .tool-link-box a:hover{
+      text-decoration:underline;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    form{
+      margin-top:10px;
+    }
+
+    .field{
+      margin-bottom:14px;
+    }
+
+    .field label{
+      display:block;
+      font-weight:bold;
+      margin-bottom:6px;
+      color:#1f2a44;
+    }
+
+    .field input,
+    .field textarea{
+      width:100%;
+      padding:12px;
+      border:1px solid #cfd8e3;
+      border-radius:8px;
+      font-size:15px;
+      font-family:Arial, sans-serif;
+    }
+
+    .field textarea{
+      min-height:140px;
+      resize:vertical;
+    }
+
+    .contact-note{
+      background:#eef4fb;
+      border-left:5px solid #2d4f7c;
+      padding:18px;
+      border-radius:8px;
+      color:#334;
+    }
+
+    .contact-note h3{
+      margin-top:0;
+    }
+
+    footer{
+      text-align:center;
+      color:#666;
+      font-size:14px;
+      padding:20px 20px 40px 20px;
+    }
+
+    @media (max-width:950px){
+      .hero-content,
+      .split,
+      .contact-grid,
+      .tool-panels{
+        grid-template-columns:1fr;
+      }
+
+      .application-grid,
+      .stats{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:36px;
+      }
+
+      .hero p{
+        font-size:17px;
+      }
+
+      .section{
+        padding:24px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="hero">
-  <h1>Colotti Automation LLC</h1>
-  <p>
-    Industrial automation support for manufacturing systems — from troubleshooting to full system design.
-  </p>
-  <a href="#contact" class="btn">Request Support</a>
-</div>
+  <section class="hero">
+    <div class="hero-content">
+      <div>
+        <h1>Colotti Automation LLC</h1>
+        <p>
+          Practical automation support for manufacturing systems — from controls troubleshooting and robotics support to conveyors, pneumatics, and system design.
+        </p>
 
-<div class="container">
-
-  <div class="section">
-    <h2>What I Do</h2>
-    <p>
-      I help manufacturers solve automation problems, improve system performance, and design reliable solutions across controls, robotics, pneumatics, and motion systems.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>PLC & Controls</h3>
-        <p>Allen-Bradley programming, troubleshooting, and system integration.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Request Support</a>
+          <a href="https://automationcalculators.net/automation-help.html" class="btn btn-secondary">Project Help Page</a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Robotics</h3>
-        <p>Fanuc and ABB robot troubleshooting, integration, and optimization.</p>
-      </div>
-
-      <div class="card">
-        <h3>Pneumatics</h3>
-        <p>System sizing, air consumption, and performance optimization.</p>
-      </div>
-
-      <div class="card">
-        <h3>Motion Systems</h3>
-        <p>Servo sizing, conveyor systems, and mechanical coordination.</p>
-      </div>
-
-      <div class="card">
-        <h3>Troubleshooting</h3>
-        <p>Fast diagnosis of downtime issues and system failures.</p>
-      </div>
-
-      <div class="card">
-        <h3>System Design</h3>
-        <p>From concept to implementation for automation systems.</p>
+      <div class="hero-panel">
+        <h3>Built for real plant-floor problems</h3>
+        <ul class="hero-list">
+          <li>PLC and controls troubleshooting</li>
+          <li>Robotics and welding application support</li>
+          <li>Pneumatics, motion, and conveyor direction</li>
+          <li>Clear help without bloated consulting fluff</li>
+        </ul>
       </div>
     </div>
+  </section>
+
+  <div class="container">
+
+    <section class="section">
+      <div class="split">
+        <div>
+          <h2>Industrial Automation Support Built Around Real Manufacturing Work</h2>
+          <p class="lead">
+            Colotti Automation LLC focuses on solving practical plant-floor problems. Whether the issue is controls, robotics, motion, air usage, downtime, or integration support, the goal is to help manufacturers move faster with less guessing and fewer wasted steps.
+          </p>
+          <p class="lead" style="margin-top:14px;">
+            This is support centered on actual automation systems, troubleshooting, and design work that has to function in the real world.
+          </p>
+        </div>
+
+        <div class="info-visual">
+          <div class="big">PLC • Robots • Motion</div>
+          <div class="label">Practical support for manufacturing automation</div>
+          <p>
+            Troubleshooting direction, application support, and system thinking focused on what actually works in production.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Core Services</h2>
+      <p class="lead">
+        Support is available across common manufacturing automation needs, with a focus on practical solutions and clear next steps.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">⚙</div>
+          <h3>PLC & Controls</h3>
+          <p>
+            Troubleshooting, logic review, signal checks, I/O issues, machine behavior analysis, and practical controls support for production systems.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🤖</div>
+          <h3>Robotics Support</h3>
+          <p>
+            Help with robot applications, integration questions, recovery direction, welding cells, payload and reach considerations, and cycle-related concerns.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🔩</div>
+          <h3>Pneumatics & Motion</h3>
+          <p>
+            Cylinder sizing, air consumption, mechanical motion, drive sizing, conveyor coordination, and performance improvement support.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🛠</div>
+          <h3>Troubleshooting</h3>
+          <p>
+            Fast direction on downtime problems, machine faults, system behavior issues, and identifying the likely next checks instead of guessing.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📐</div>
+          <h3>System Design</h3>
+          <p>
+            Support for layout thinking, concept planning, automation approach decisions, and building a stronger starting point before money gets wasted.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏭</div>
+          <h3>Manufacturing Applications</h3>
+          <p>
+            Automation support tied to real production needs including welding, conveyors, handling systems, and equipment performance improvement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Application Areas</h2>
+
+      <div class="application-grid">
+        <div class="application-card">
+          <div class="application-top">
+            <div class="application-badge">⚡</div>
+            <h3>Welding Cells</h3>
+          </div>
+          <p>
+            Practical direction for robotic welding applications, manufacturing automation issues, and cell performance concerns.
+          </p>
+        </div>
+
+        <div class="application-card">
+          <div class="application-top">
+            <div class="application-badge">🤖</div>
+            <h3>Robotics & Integration</h3>
+          </div>
+          <p>
+            From robotic applications to integration concerns, the focus stays on getting from problem to action quickly and clearly.
+          </p>
+        </div>
+
+        <div class="application-card">
+          <div class="application-top">
+            <div class="application-badge">🔄</div>
+            <h3>Conveyors & Flow</h3>
+          </div>
+          <p>
+            Conveyor and material handling systems often drive the pace of production. Support includes motion, throughput, and system behavior considerations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlight-box">
+      <h2>Need a Better Starting Point Before You Spend Time or Money?</h2>
+      <p>
+        Many automation problems do not need more guesswork — they need better direction. Whether you are troubleshooting a current issue or planning a new system, getting pointed in the right direction early can save a lot of wasted effort.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>Controls</strong>
+          PLC and machine behavior support
+        </div>
+        <div class="stat">
+          <strong>Robotics</strong>
+          Practical help for real applications
+        </div>
+        <div class="stat">
+          <strong>Systems</strong>
+          Design and troubleshooting direction
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="split">
+        <div class="info-visual">
+          <div class="big">Free Engineering Tools</div>
+          <div class="label">Use calculators first, then get project help</div>
+          <p>
+            Start with practical tools and resources, then reach out when you need help applying them to a real system or project.
+          </p>
+        </div>
+
+        <div>
+          <h2>Use the Free Engineering Tools Too</h2>
+          <p class="lead">
+            If you are not ready to reach out yet, start with the free calculators and resources on AutomationCalculators.net. They are built to help engineers, technicians, and manufacturers get useful starting points faster.
+          </p>
+
+          <div class="tool-panels">
+            <div class="tool-link-box">
+              <p style="margin-top:0;">Visit the free tool platform here:</p>
+              <p style="margin-bottom:0;">
+                <a href="https://automationcalculators.net">AutomationCalculators.net</a>
+              </p>
+            </div>
+
+            <div class="tool-link-box">
+              <p style="margin-top:0;">Need direct project help instead of just calculators?</p>
+              <p style="margin-bottom:0;">
+                <a href="https://automationcalculators.net/automation-help.html">Go to the Project Help Page</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+
+      <div class="contact-grid">
+        <div>
+          <form action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required>
+            </div>
+
+            <div class="field">
+              <label for="message">What do you need help with?</label>
+              <textarea id="message" name="message" required placeholder="Describe the issue, application, or project."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Request</button>
+          </form>
+        </div>
+
+        <div>
+          <div class="contact-note">
+            <h3>Keep this page clean and safe</h3>
+            <p>
+              This version avoids using outside industrial photos that could create copyright problems.
+            </p>
+            <p>
+              Later, the best upgrade is to replace the graphic panels with your own photos of control panels, equipment, projects, or screenshots you own.
+            </p>
+            <p style="margin-bottom:0;">
+              That will look more credible anyway, because real project visuals beat generic internet images.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 
-  <div class="section">
-    <h2>About</h2>
-    <p>
-      Colotti Automation LLC is focused on practical, real-world automation solutions. The goal is simple: solve problems quickly, design systems correctly, and help manufacturers avoid costly mistakes.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Free Engineering Tools</h2>
-    <p>
-      Not ready to reach out yet? Use free automation calculators and resources:
-    </p>
-    <a href="https://automationcalculators.net" class="btn">Visit AutomationCalculators.net</a>
-  </div>
-
-  <div class="section" id="contact">
-    <h2>Contact</h2>
-
-    <form action="https://formspree.io/f/mwvwjzlz" method="POST">
-      <p><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:10px;margin-bottom:10px;"></p>
-
-      <p><input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:10px;margin-bottom:10px;"></p>
-
-      <p><textarea name="message" placeholder="What do you need help with?" required style="width:100%;padding:10px;height:120px;"></textarea></p>
-
-      <button type="submit" class="btn">Send Request</button>
-    </form>
-
-  </div>
-
-  <div class="cta">
-    <h2>Need Help Fast?</h2>
-    <p>Submit your project details and get pointed in the right direction.</p>
-    <a href="https://automationcalculators.net/automation-help.html" class="btn">Go to Project Help Page</a>
-  </div>
-
-</div>
-
-<footer>
-  Colotti Automation LLC • Industrial Automation Solutions
-</footer>
+  <footer>
+    Colotti Automation LLC • Industrial Automation Support for Real Manufacturing Work
+  </footer>
 
 </body>
 </html>
