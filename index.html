@@ -1,16 +1,21 @@
+# Full Homepage Replacement — ColottiAutomationLLC.com
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Colotti Automation LLC | Industrial Automation & Controls</title>
-  <meta name="description" content="Colotti Automation LLC provides industrial automation support including PLC programming, robotics, pneumatics, troubleshooting, conveyors, and system design for manufacturing applications.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colotti Automation LLC | Practical Industrial Automation Engineering</title>
+  <meta name="description" content="Colotti Automation LLC provides practical industrial automation engineering support including PLC programming, machine integration, troubleshooting, vision systems, pneumatic systems, controls support, and manufacturing reliability improvements.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://colottiautomationllc.com">
+  <link rel="canonical" href="https://colottiautomationllc.com/">
 
   <style>
     *{
       box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
 
     html{
@@ -18,431 +23,475 @@
     }
 
     body{
-      margin:0;
       font-family:Arial, sans-serif;
-      background:#f4f6f8;
+      background:#f5f7fa;
       color:#1f2a44;
-      line-height:1.6;
+      line-height:1.7;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:0 20px;
     }
 
     .hero{
-      background:
-        radial-gradient(circle at top right, rgba(255,180,0,0.18), transparent 28%),
-        linear-gradient(135deg, #152238 0%, #1f2a44 45%, #2d4f7c 100%);
-      color:white;
-      padding:90px 20px 80px 20px;
-      position:relative;
-      overflow:hidden;
+      background:white;
+      border-bottom:1px solid #d9e2ec;
+      padding:90px 0 70px 0;
     }
 
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:auto -120px -120px auto;
-      width:320px;
-      height:320px;
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:50%;
-    }
-
-    .hero::after{
-      content:"";
-      position:absolute;
-      top:-90px;
-      left:-90px;
-      width:240px;
-      height:240px;
-      border:1px solid rgba(255,255,255,0.07);
-      border-radius:50%;
-    }
-
-    .hero-content{
-      max-width:1120px;
-      margin:0 auto;
+    .hero-grid{
       display:grid;
-      grid-template-columns:1.2fr 0.8fr;
-      gap:34px;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:40px;
       align-items:center;
-      position:relative;
-      z-index:1;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      background:#e8eef7;
+      color:#2d4f7c;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:bold;
+      letter-spacing:0.5px;
+      margin-bottom:22px;
     }
 
     .hero h1{
-      font-size:48px;
-      line-height:1.1;
-      margin:0 0 16px 0;
+      font-size:54px;
+      line-height:1.08;
+      margin-bottom:24px;
+      color:#152238;
     }
 
     .hero p{
       font-size:19px;
-      max-width:720px;
-      margin:0 0 24px 0;
-      color:rgba(255,255,255,0.92);
+      color:#445;
+      margin-bottom:28px;
+      max-width:760px;
     }
 
     .hero-buttons{
       display:flex;
       flex-wrap:wrap;
-      gap:12px;
-      margin-top:20px;
+      gap:14px;
+      margin-bottom:34px;
     }
 
     .btn{
-      display:inline-block;
-      padding:14px 24px;
-      border-radius:8px;
-      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:15px 26px;
+      border-radius:10px;
       font-weight:bold;
       transition:0.2s ease;
-      border:none;
-      cursor:pointer;
       font-size:16px;
+      cursor:pointer;
     }
 
     .btn-primary{
-      background:#ffb400;
-      color:#1f2a44;
+      background:#2d4f7c;
+      color:white;
+      border:2px solid #2d4f7c;
     }
 
     .btn-primary:hover{
-      opacity:0.92;
+      background:#1f3c63;
+      border-color:#1f3c63;
     }
 
     .btn-secondary{
-      background:transparent;
-      color:white;
-      border:2px solid rgba(255,255,255,0.78);
+      background:white;
+      color:#2d4f7c;
+      border:2px solid #cfd8e3;
     }
 
     .btn-secondary:hover{
-      background:rgba(255,255,255,0.08);
+      border-color:#2d4f7c;
+      background:#f8fafc;
+    }
+
+    .hero-highlights{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .hero-highlight{
+      background:#f8fafc;
+      border:1px solid #d9e2ec;
+      border-radius:12px;
+      padding:16px;
+      font-size:15px;
+      color:#334;
     }
 
     .hero-panel{
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.12);
-      border-radius:16px;
-      padding:24px;
-      backdrop-filter:blur(3px);
-    }
-
-    .hero-panel h3{
-      margin-top:0;
-      margin-bottom:14px;
-      font-size:22px;
-      color:white;
-    }
-
-    .hero-list{
-      margin:0;
-      padding-left:20px;
-      color:rgba(255,255,255,0.92);
-    }
-
-    .hero-list li{
-      margin-bottom:10px;
-    }
-
-    .container{
-      max-width:1180px;
-      margin:0 auto;
-      padding:34px 20px;
-    }
-
-    .section{
-      background:white;
-      border-radius:14px;
-      box-shadow:0 4px 18px rgba(0,0,0,0.08);
+      background:#152238;
+      border-radius:20px;
       padding:34px;
-      margin-bottom:28px;
-    }
-
-    .section h2{
-      margin-top:0;
-      margin-bottom:15px;
-      font-size:32px;
-      color:#1f2a44;
-    }
-
-    .lead{
-      font-size:17px;
-      color:#445;
-      margin-bottom:0;
-    }
-
-    .split{
-      display:grid;
-      grid-template-columns:1.1fr 0.9fr;
-      gap:28px;
-      align-items:center;
-    }
-
-    .info-visual{
-      min-height:280px;
-      border-radius:16px;
-      background:
-        linear-gradient(135deg, rgba(31,42,68,0.96), rgba(45,79,124,0.92));
       color:white;
-      padding:28px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
       position:relative;
       overflow:hidden;
     }
 
-    .info-visual::before{
+    .hero-panel::before{
       content:"";
       position:absolute;
-      width:180px;
-      height:180px;
-      right:-40px;
-      top:-40px;
-      border:1px solid rgba(255,255,255,0.10);
-      border-radius:50%;
-    }
-
-    .info-visual::after{
-      content:"";
-      position:absolute;
-      width:120px;
-      height:120px;
-      left:-30px;
-      bottom:-30px;
+      width:240px;
+      height:240px;
       border:1px solid rgba(255,255,255,0.08);
       border-radius:50%;
+      top:-80px;
+      right:-80px;
     }
 
-    .info-visual .big{
-      font-size:42px;
-      font-weight:bold;
-      line-height:1;
-      margin-bottom:14px;
+    .hero-panel::after{
+      content:"";
+      position:absolute;
+      width:140px;
+      height:140px;
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:50%;
+      bottom:-40px;
+      left:-40px;
     }
 
-    .info-visual .label{
-      font-size:18px;
-      margin-bottom:10px;
+    .hero-panel h2{
+      font-size:30px;
+      margin-bottom:20px;
+      position:relative;
+      z-index:1;
     }
 
-    .info-visual p{
-      margin:0;
+    .hero-panel p{
       color:rgba(255,255,255,0.88);
+      margin-bottom:20px;
+      font-size:16px;
+      position:relative;
+      z-index:1;
+    }
+
+    .hero-panel ul{
+      padding-left:20px;
+      position:relative;
+      z-index:1;
+    }
+
+    .hero-panel li{
+      margin-bottom:12px;
+      color:rgba(255,255,255,0.9);
+    }
+
+    .section{
+      padding:80px 0;
+    }
+
+    .section-white{
+      background:white;
+    }
+
+    .section-light{
+      background:#f5f7fa;
+    }
+
+    .section-dark{
+      background:#152238;
+      color:white;
+    }
+
+    .section-title{
+      font-size:42px;
+      margin-bottom:18px;
+      color:#152238;
+      line-height:1.15;
+    }
+
+    .section-dark .section-title{
+      color:white;
+    }
+
+    .section-subtitle{
+      max-width:900px;
+      color:#445;
+      font-size:18px;
+      margin-bottom:40px;
+    }
+
+    .section-dark .section-subtitle{
+      color:rgba(255,255,255,0.82);
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:20px;
+    }
+
+    .stat-card{
+      background:white;
+      border:1px solid #d9e2ec;
+      border-radius:16px;
+      padding:28px;
+    }
+
+    .stat-number{
+      font-size:40px;
+      font-weight:bold;
+      color:#2d4f7c;
+      margin-bottom:8px;
+    }
+
+    .stat-label{
+      color:#445;
+      font-size:15px;
     }
 
     .services-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-      gap:20px;
-      margin-top:20px;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
     }
 
     .service-card{
-      background:#f8fafc;
+      background:white;
       border:1px solid #d9e2ec;
-      border-radius:12px;
-      padding:22px;
+      border-radius:16px;
+      padding:30px;
+      transition:0.2s ease;
       height:100%;
     }
 
-    .service-icon{
-      width:56px;
-      height:56px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:#1f2a44;
-      color:white;
-      font-size:25px;
-      margin-bottom:14px;
+    .service-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 28px rgba(0,0,0,0.08);
     }
 
     .service-card h3{
-      margin:0 0 10px 0;
-      font-size:22px;
-      color:#1f2a44;
+      font-size:24px;
+      margin-bottom:14px;
+      color:#152238;
     }
 
     .service-card p{
-      margin:0;
-      color:#444;
-      font-size:15px;
+      color:#445;
+      font-size:16px;
     }
 
-    .application-grid{
+    .problem-grid{
       display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:18px;
-      margin-top:20px;
+      grid-template-columns:repeat(2, 1fr);
+      gap:22px;
     }
 
-    .application-card{
-      border:1px solid #d9e2ec;
-      background:#f8fafc;
-      border-radius:12px;
-      padding:24px;
+    .problem-card{
+      background:#1f2a44;
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:16px;
+      padding:28px;
     }
 
-    .application-top{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:12px;
-    }
-
-    .application-badge{
-      width:52px;
-      height:52px;
-      border-radius:12px;
-      background:#e8eef7;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+    .problem-card h3{
       font-size:24px;
-    }
-
-    .application-card h3{
-      margin:0;
-      font-size:21px;
-    }
-
-    .application-card p{
-      margin:0;
-      color:#444;
-      font-size:15px;
-    }
-
-    .highlight-box{
-      background:linear-gradient(135deg, #1f2a44, #2d4f7c);
+      margin-bottom:12px;
       color:white;
-      border-radius:14px;
-      padding:34px;
-      text-align:center;
     }
 
-    .highlight-box h2{
-      color:white;
-      margin-top:0;
+    .problem-card p{
+      color:rgba(255,255,255,0.84);
+      font-size:16px;
     }
 
-    .highlight-box p{
-      max-width:760px;
-      margin:0 auto 20px auto;
-      font-size:17px;
-    }
-
-    .stats{
+    .experience-grid{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
-      gap:18px;
-      margin-top:22px;
+      gap:24px;
     }
 
-    .stat{
-      background:rgba(255,255,255,0.1);
-      border:1px solid rgba(255,255,255,0.12);
-      border-radius:12px;
-      padding:18px;
+    .experience-card{
+      background:#f8fafc;
+      border:1px solid #d9e2ec;
+      border-radius:16px;
+      padding:28px;
     }
 
-    .stat strong{
-      display:block;
-      font-size:28px;
-      margin-bottom:6px;
+    .experience-card h3{
+      font-size:24px;
+      margin-bottom:14px;
+      color:#152238;
     }
 
-    .tool-panels{
+    .experience-card ul{
+      padding-left:20px;
+    }
+
+    .experience-card li{
+      margin-bottom:10px;
+      color:#445;
+    }
+
+    .split-section{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:18px;
-      margin-top:18px;
+      gap:40px;
+      align-items:center;
     }
 
-    .tool-link-box{
-      background:#f8fafc;
+    .dark-panel{
+      background:#152238;
+      color:white;
+      border-radius:20px;
+      padding:40px;
+    }
+
+    .dark-panel h3{
+      font-size:32px;
+      margin-bottom:20px;
+    }
+
+    .dark-panel p{
+      color:rgba(255,255,255,0.84);
+      margin-bottom:20px;
+    }
+
+    .resource-boxes{
+      display:grid;
+      gap:20px;
+    }
+
+    .resource-box{
+      background:white;
       border:1px solid #d9e2ec;
-      border-radius:12px;
-      padding:22px;
+      border-radius:16px;
+      padding:28px;
     }
 
-    .tool-link-box a{
+    .resource-box h3{
+      font-size:24px;
+      margin-bottom:14px;
+      color:#152238;
+    }
+
+    .resource-box p{
+      color:#445;
+      margin-bottom:18px;
+    }
+
+    .resource-link{
       color:#2d4f7c;
       font-weight:bold;
-      text-decoration:none;
-    }
-
-    .tool-link-box a:hover{
-      text-decoration:underline;
     }
 
     .contact-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:28px;
+      grid-template-columns:1fr 0.9fr;
+      gap:40px;
       align-items:start;
     }
 
-    form{
-      margin-top:10px;
+    .contact-form{
+      background:white;
+      border:1px solid #d9e2ec;
+      border-radius:20px;
+      padding:34px;
     }
 
     .field{
-      margin-bottom:14px;
+      margin-bottom:20px;
     }
 
     .field label{
       display:block;
+      margin-bottom:8px;
       font-weight:bold;
-      margin-bottom:6px;
-      color:#1f2a44;
+      color:#152238;
     }
 
     .field input,
     .field textarea{
       width:100%;
-      padding:12px;
       border:1px solid #cfd8e3;
-      border-radius:8px;
-      font-size:15px;
+      border-radius:10px;
+      padding:14px;
+      font-size:16px;
       font-family:Arial, sans-serif;
     }
 
     .field textarea{
-      min-height:140px;
+      min-height:170px;
       resize:vertical;
     }
 
-    .contact-note{
-      background:#eef4fb;
-      border-left:5px solid #2d4f7c;
-      padding:18px;
-      border-radius:8px;
-      color:#334;
+    .contact-info{
+      background:#152238;
+      border-radius:20px;
+      padding:40px;
+      color:white;
     }
 
-    .contact-note h3{
-      margin-top:0;
+    .contact-info h3{
+      font-size:32px;
+      margin-bottom:20px;
+    }
+
+    .contact-info p{
+      color:rgba(255,255,255,0.84);
+      margin-bottom:18px;
+    }
+
+    .contact-info ul{
+      padding-left:20px;
+      margin-top:20px;
+    }
+
+    .contact-info li{
+      margin-bottom:14px;
+      color:rgba(255,255,255,0.88);
     }
 
     footer{
+      background:#0f1726;
+      color:rgba(255,255,255,0.7);
       text-align:center;
-      color:#666;
+      padding:34px 20px;
       font-size:14px;
-      padding:20px 20px 40px 20px;
     }
 
-    @media (max-width:950px){
-      .hero-content,
-      .split,
-      .contact-grid,
-      .tool-panels{
+    @media (max-width:1000px){
+      .hero-grid,
+      .split-section,
+      .contact-grid{
         grid-template-columns:1fr;
       }
 
-      .application-grid,
-      .stats{
+      .stats-grid,
+      .services-grid,
+      .experience-grid,
+      .problem-grid{
         grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .section-title{
+        font-size:34px;
+      }
+    }
+
+    @media (max-width:700px){
+      .hero{
+        padding:70px 0 50px 0;
       }
 
       .hero h1{
@@ -453,261 +502,419 @@
         font-size:17px;
       }
 
+      .hero-highlights{
+        grid-template-columns:1fr;
+      }
+
       .section{
-        padding:24px;
+        padding:60px 0;
       }
     }
   </style>
 </head>
 <body>
 
-  <section class="hero">
-    <div class="hero-content">
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
       <div>
-        <h1>Colotti Automation LLC</h1>
+        <div class="eyebrow">PRACTICAL INDUSTRIAL AUTOMATION ENGINEERING</div>
+
+        <h1>
+          Automation Support Built Around Real Manufacturing Systems
+        </h1>
+
         <p>
-          Practical automation support for manufacturing systems — from controls troubleshooting and robotics support to conveyors, pneumatics, and system design.
+          Colotti Automation LLC provides practical automation engineering support including PLC programming, controls troubleshooting, machine integration, Keyence vision systems, pneumatic systems, process improvement, and production-focused manufacturing support.
         </p>
 
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Request Support</a>
-          <a href="https://automationcalculators.net/automation-help.html" class="btn btn-secondary">Project Help Page</a>
+          <a href="#contact" class="btn btn-primary">Request Project Support</a>
+          <a href="https://automationcalculators.net" class="btn btn-secondary">Explore Engineering Resources</a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="hero-highlight">
+            Production-focused troubleshooting and automation support
+          </div>
+
+          <div class="hero-highlight">
+            Experience supporting real manufacturing equipment and systems
+          </div>
+
+          <div class="hero-highlight">
+            Controls, vision systems, robotics, conveyors, and pneumatics
+          </div>
+
+          <div class="hero-highlight">
+            Practical engineering direction without consulting fluff
+          </div>
         </div>
       </div>
 
       <div class="hero-panel">
-        <h3>Built for real plant-floor problems</h3>
-        <ul class="hero-list">
-          <li>PLC and controls troubleshooting</li>
-          <li>Robotics and welding application support</li>
-          <li>Pneumatics, motion, and conveyor direction</li>
-          <li>Clear help without bloated consulting fluff</li>
+        <h2>Experience Areas</h2>
+
+        <p>
+          Support and engineering direction based around real manufacturing environments, automation systems, and production equipment.
+        </p>
+
+        <ul>
+          <li>PLC programming and controls troubleshooting</li>
+          <li>Keyence vision system integration</li>
+          <li>Production line support and reliability improvements</li>
+          <li>Custom machine concepts and automation systems</li>
+          <li>Pneumatic systems and motion applications</li>
+          <li>Conveyors and material handling systems</li>
+          <li>Robot integration and manufacturing support</li>
+          <li>Manufacturing process improvement</li>
         </ul>
       </div>
-    </div>
-  </section>
 
+    </div>
+  </div>
+</section>
+
+<section class="section section-light">
   <div class="container">
 
-    <section class="section">
-      <div class="split">
-        <div>
-          <h2>Industrial Automation Support Built Around Real Manufacturing Work</h2>
-          <p class="lead">
-            Colotti Automation LLC focuses on solving practical plant-floor problems. Whether the issue is controls, robotics, motion, air usage, downtime, or integration support, the goal is to help manufacturers move faster with less guessing and fewer wasted steps.
-          </p>
-          <p class="lead" style="margin-top:14px;">
-            This is support centered on actual automation systems, troubleshooting, and design work that has to function in the real world.
-          </p>
-        </div>
+    <h2 class="section-title">
+      Built Around Practical Manufacturing Experience
+    </h2>
 
-        <div class="info-visual">
-          <div class="big">PLC • Robots • Motion</div>
-          <div class="label">Practical support for manufacturing automation</div>
-          <p>
-            Troubleshooting direction, application support, and system thinking focused on what actually works in production.
-          </p>
+    <p class="section-subtitle">
+      Colotti Automation LLC is built around practical production experience — not generic consulting theory. The focus is helping manufacturers solve real automation problems using structured engineering thinking, production-focused troubleshooting, and practical system design.
+    </p>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">
+          Keyence vision systems integrated across manufacturing applications
         </div>
       </div>
-    </section>
 
-    <section class="section">
-      <h2>Core Services</h2>
-      <p class="lead">
-        Support is available across common manufacturing automation needs, with a focus on practical solutions and clear next steps.
-      </p>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">⚙</div>
-          <h3>PLC & Controls</h3>
-          <p>
-            Troubleshooting, logic review, signal checks, I/O issues, machine behavior analysis, and practical controls support for production systems.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🤖</div>
-          <h3>Robotics Support</h3>
-          <p>
-            Help with robot applications, integration questions, recovery direction, welding cells, payload and reach considerations, and cycle-related concerns.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🔩</div>
-          <h3>Pneumatics & Motion</h3>
-          <p>
-            Cylinder sizing, air consumption, mechanical motion, drive sizing, conveyor coordination, and performance improvement support.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🛠</div>
-          <h3>Troubleshooting</h3>
-          <p>
-            Fast direction on downtime problems, machine faults, system behavior issues, and identifying the likely next checks instead of guessing.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">📐</div>
-          <h3>System Design</h3>
-          <p>
-            Support for layout thinking, concept planning, automation approach decisions, and building a stronger starting point before money gets wasted.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🏭</div>
-          <h3>Manufacturing Applications</h3>
-          <p>
-            Automation support tied to real production needs including welding, conveyors, handling systems, and equipment performance improvement.
-          </p>
+      <div class="stat-card">
+        <div class="stat-number">3</div>
+        <div class="stat-label">
+          Production line launches supported through engineering and automation work
         </div>
       </div>
-    </section>
 
-    <section class="section">
-      <h2>Application Areas</h2>
-
-      <div class="application-grid">
-        <div class="application-card">
-          <div class="application-top">
-            <div class="application-badge">⚡</div>
-            <h3>Welding Cells</h3>
-          </div>
-          <p>
-            Practical direction for robotic welding applications, manufacturing automation issues, and cell performance concerns.
-          </p>
-        </div>
-
-        <div class="application-card">
-          <div class="application-top">
-            <div class="application-badge">🤖</div>
-            <h3>Robotics & Integration</h3>
-          </div>
-          <p>
-            From robotic applications to integration concerns, the focus stays on getting from problem to action quickly and clearly.
-          </p>
-        </div>
-
-        <div class="application-card">
-          <div class="application-top">
-            <div class="application-badge">🔄</div>
-            <h3>Conveyors & Flow</h3>
-          </div>
-          <p>
-            Conveyor and material handling systems often drive the pace of production. Support includes motion, throughput, and system behavior considerations.
-          </p>
+      <div class="stat-card">
+        <div class="stat-number">2017</div>
+        <div class="stat-label">
+          Years of hands-on manufacturing automation and engineering experience
         </div>
       </div>
-    </section>
 
-    <section class="highlight-box">
-      <h2>Need a Better Starting Point Before You Spend Time or Money?</h2>
-      <p>
-        Many automation problems do not need more guesswork — they need better direction. Whether you are troubleshooting a current issue or planning a new system, getting pointed in the right direction early can save a lot of wasted effort.
-      </p>
-
-      <div class="stats">
-        <div class="stat">
-          <strong>Controls</strong>
-          PLC and machine behavior support
-        </div>
-        <div class="stat">
-          <strong>Robotics</strong>
-          Practical help for real applications
-        </div>
-        <div class="stat">
-          <strong>Systems</strong>
-          Design and troubleshooting direction
+      <div class="stat-card">
+        <div class="stat-number">Real</div>
+        <div class="stat-label">
+          Production-focused automation support built around actual manufacturing systems
         </div>
       </div>
-    </section>
 
-    <section class="section">
-      <div class="split">
-        <div class="info-visual">
-          <div class="big">Free Engineering Tools</div>
-          <div class="label">Use calculators first, then get project help</div>
-          <p>
-            Start with practical tools and resources, then reach out when you need help applying them to a real system or project.
-          </p>
-        </div>
-
-        <div>
-          <h2>Use the Free Engineering Tools Too</h2>
-          <p class="lead">
-            If you are not ready to reach out yet, start with the free calculators and resources on AutomationCalculators.net. They are built to help engineers, technicians, and manufacturers get useful starting points faster.
-          </p>
-
-          <div class="tool-panels">
-            <div class="tool-link-box">
-              <p style="margin-top:0;">Visit the free tool platform here:</p>
-              <p style="margin-bottom:0;">
-                <a href="https://automationcalculators.net">AutomationCalculators.net</a>
-              </p>
-            </div>
-
-            <div class="tool-link-box">
-              <p style="margin-top:0;">Need direct project help instead of just calculators?</p>
-              <p style="margin-bottom:0;">
-                <a href="https://automationcalculators.net/automation-help.html">Go to the Project Help Page</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <h2>Contact</h2>
-
-      <div class="contact-grid">
-        <div>
-          <form action="https://formspree.io/f/mwvwjzlz" method="POST">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" type="text" name="name" required>
-            </div>
-
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" type="email" name="email" required>
-            </div>
-
-            <div class="field">
-              <label for="message">What do you need help with?</label>
-              <textarea id="message" name="message" required placeholder="Describe the issue, application, or project."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Send Request</button>
-          </form>
-        </div>
-
-        <div>
-          <div class="contact-note">
-            <h3>What to include</h3>
-            <p>
-              Share a few details about the system, machine, or issue you are dealing with so the request can be reviewed more effectively.
-            </p>
-            <p>
-              Helpful details include the type of equipment, the problem you are seeing, and whether this is a current downtime issue or a planned project.
-            </p>
-            <p style="margin-bottom:0;">
-              The more specific the description, the easier it is to point you in the right direction.
-            </p>
-        </div>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </div>
+</section>
 
-  <footer>
-    Colotti Automation LLC • Industrial Automation Support for Real Manufacturing Work
-  </footer>
+<section class="section section-white">
+  <div class="container">
+
+    <h2 class="section-title">
+      Core Services
+    </h2>
+
+    <p class="section-subtitle">
+      Support is centered around practical automation engineering, manufacturing reliability, controls troubleshooting, and production-focused system improvement.
+    </p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>PLC & Controls Support</h3>
+        <p>
+          Troubleshooting machine behavior, I/O issues, controls logic concerns, communication problems, system faults, and manufacturing automation reliability issues.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Vision System Integration</h3>
+        <p>
+          Support for Keyence vision systems including integration direction, production troubleshooting, inspection logic considerations, and manufacturing implementation support.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Machine Integration</h3>
+        <p>
+          Practical support for machine concepts, manufacturing automation integration, system coordination, and production equipment improvements.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Manufacturing Troubleshooting</h3>
+        <p>
+          Fast engineering direction for downtime issues, recurring production faults, machine behavior problems, and identifying likely root causes.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Pneumatics & Motion</h3>
+        <p>
+          Support for pneumatic systems, air consumption concerns, cylinder applications, conveyor systems, motion coordination, and automation mechanics.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Process Improvement</h3>
+        <p>
+          Production-focused improvements designed to improve reliability, reduce downtime, support operators, and improve manufacturing consistency.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+
+    <h2 class="section-title">
+      Common Problems We Help Solve
+    </h2>
+
+    <p class="section-subtitle">
+      Most manufacturing automation issues are not caused by one single component. The challenge is usually identifying the right direction quickly and avoiding wasted time chasing the wrong problem.
+    </p>
+
+    <div class="problem-grid">
+
+      <div class="problem-card">
+        <h3>Machines Randomly Faulting</h3>
+        <p>
+          Recurring production faults, intermittent machine behavior, unexplained downtime, and systems that are difficult to troubleshoot efficiently.
+        </p>
+      </div>
+
+      <div class="problem-card">
+        <h3>Vision Systems Causing Downtime</h3>
+        <p>
+          Inspection systems creating production instability, false rejects, difficult recoveries, inconsistent reads, or integration concerns.
+        </p>
+      </div>
+
+      <div class="problem-card">
+        <h3>Robot & Cell Recovery Issues</h3>
+        <p>
+          Production cells that are difficult to recover, robot process instability, sequencing concerns, or manufacturing coordination problems.
+        </p>
+      </div>
+
+      <div class="problem-card">
+        <h3>Conveyor & Flow Problems</h3>
+        <p>
+          Material handling bottlenecks, inconsistent flow, poor line coordination, conveyor timing issues, and throughput limitations.
+        </p>
+      </div>
+
+      <div class="problem-card">
+        <h3>Pneumatic Application Concerns</h3>
+        <p>
+          Air usage issues, cylinder sizing confusion, force concerns, inconsistent motion, and manufacturing performance problems.
+        </p>
+      </div>
+
+      <div class="problem-card">
+        <h3>Production Reliability Problems</h3>
+        <p>
+          Systems that technically function but continuously create production headaches, operator frustration, scrap, or downtime risk.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="container">
+
+    <h2 class="section-title">
+      Real Manufacturing Experience
+    </h2>
+
+    <p class="section-subtitle">
+      The focus is not theoretical consulting presentations. The focus is practical manufacturing automation experience and solving real production problems.
+    </p>
+
+    <div class="experience-grid">
+
+      <div class="experience-card">
+        <h3>Manufacturing Systems</h3>
+
+        <ul>
+          <li>Production line support</li>
+          <li>Automotive manufacturing environments</li>
+          <li>Conveyors and material handling systems</li>
+          <li>Machine reliability improvements</li>
+          <li>Production troubleshooting support</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Automation & Controls</h3>
+
+        <ul>
+          <li>PLC troubleshooting and controls support</li>
+          <li>Keyence vision systems</li>
+          <li>Robot application support</li>
+          <li>Pneumatic systems and motion applications</li>
+          <li>Automation system integration</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Engineering Approach</h3>
+
+        <ul>
+          <li>Production-first engineering decisions</li>
+          <li>Practical implementation thinking</li>
+          <li>Manufacturing-focused problem solving</li>
+          <li>Clear troubleshooting direction</li>
+          <li>Systems built around real-world operation</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+
+    <div class="split-section">
+
+      <div class="dark-panel">
+        <h3>
+          Engineering Resources Built for Manufacturing
+        </h3>
+
+        <p>
+          Colotti Automation LLC is connected to AutomationCalculators.net — a growing engineering resource platform built around industrial automation, manufacturing troubleshooting, electrical systems, pneumatics, robotics, machine design, and practical engineering tools.
+        </p>
+
+        <p>
+          The same production-focused engineering mindset used to build those tools also drives the support and automation direction provided here.
+        </p>
+
+        <a href="https://automationcalculators.net" class="btn btn-primary">
+          Visit AutomationCalculators.net
+        </a>
+      </div>
+
+      <div class="resource-boxes">
+
+        <div class="resource-box">
+          <h3>Free Engineering Calculators</h3>
+
+          <p>
+            Access practical engineering calculators and manufacturing tools covering pneumatics, PLC systems, motion, conveyors, electrical calculations, robotics, machine design, and automation troubleshooting.
+          </p>
+
+          <a class="resource-link" href="https://automationcalculators.net">
+            Explore Engineering Calculators →
+          </a>
+        </div>
+
+        <div class="resource-box">
+          <h3>Project Support & Troubleshooting</h3>
+
+          <p>
+            Need direct help applying engineering concepts to a real manufacturing problem? Reach out with details about your application, downtime issue, or automation concern.
+          </p>
+
+          <a class="resource-link" href="#contact">
+            Request Project Support →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="contact">
+  <div class="container">
+
+    <h2 class="section-title">
+      Request Project Support
+    </h2>
+
+    <p class="section-subtitle">
+      Describe the machine, automation system, production issue, or project you need help with. The more specific the details, the easier it is to provide useful direction.
+    </p>
+
+    <div class="contact-grid">
+
+      <div class="contact-form">
+
+        <form action="https://formspree.io/f/mwvwjzlz" method="POST">
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="field">
+            <label for="message">What do you need help with?</label>
+            <textarea id="message" name="message" placeholder="Describe the equipment, production issue, controls concern, machine behavior, or project details." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Send Request
+          </button>
+
+        </form>
+
+      </div>
+
+      <div class="contact-info">
+
+        <h3>
+          Helpful Information To Include
+        </h3>
+
+        <p>
+          Including clear details about the machine, automation system, or production problem helps speed up troubleshooting and improves the quality of the engineering direction.
+        </p>
+
+        <ul>
+          <li>What equipment or system is involved?</li>
+          <li>Is this a downtime issue or planned project?</li>
+          <li>What behavior or fault is occurring?</li>
+          <li>What troubleshooting has already been attempted?</li>
+          <li>What production impact is being seen?</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  Colotti Automation LLC • Practical Industrial Automation Engineering Support
+</footer>
 
 </body>
 </html>
+```
