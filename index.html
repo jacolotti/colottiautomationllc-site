@@ -470,6 +470,74 @@
       font-size:14px;
     }
 
+
+    .reviews-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+    }
+
+    .review-card{
+      background:white;
+      border:1px solid #d9e2ec;
+      border-radius:16px;
+      padding:28px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.05);
+      height:100%;
+    }
+
+    .stars{
+      color:#f4b400;
+      font-size:22px;
+      letter-spacing:2px;
+      margin-bottom:14px;
+      font-weight:bold;
+    }
+
+    .review-card p{
+      color:#445;
+      font-size:16px;
+      margin-bottom:18px;
+    }
+
+    .review-source{
+      color:#152238;
+      font-weight:bold;
+      font-size:15px;
+    }
+
+    .review-summary{
+      background:#152238;
+      color:white;
+      border-radius:20px;
+      padding:34px;
+      margin-bottom:28px;
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:24px;
+      align-items:center;
+    }
+
+    .review-score{
+      font-size:38px;
+      line-height:1;
+      font-weight:bold;
+      color:white;
+    }
+
+    .review-summary p{
+      color:rgba(255,255,255,0.86);
+      font-size:17px;
+    }
+
+    .review-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:30px;
+      justify-content:center;
+    }
+
     @media (max-width:1000px){
       .hero-grid,
       .split-section,
@@ -480,7 +548,12 @@
       .stats-grid,
       .services-grid,
       .experience-grid,
-      .problem-grid{
+      .problem-grid,
+      .reviews-grid{
+        grid-template-columns:1fr;
+      }
+
+      .review-summary{
         grid-template-columns:1fr;
       }
 
@@ -876,6 +949,65 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+
+<section class="section section-light" id="reviews">
+  <div class="container">
+
+    <h2 class="section-title">
+      Google Reviews & Project Feedback
+    </h2>
+
+    <p class="section-subtitle">
+      Feedback from customers and manufacturing teams who have worked with Colotti Automation LLC on automation support, troubleshooting, vision systems, controls, and practical manufacturing problems.
+    </p>
+
+    <div class="review-summary">
+      <div>
+        <div class="review-score">Google</div>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div>
+        <h3>Customer feedback from Google Reviews</h3>
+        <p>
+          Real project feedback helps manufacturers understand the kind of practical troubleshooting, communication, and production-focused support Colotti Automation LLC provides.
+        </p>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          "I recently worked with Jon Colotti of Colotti Automation LLC on a challenging vision system project at our injection molding facility, and I cannot recommend him highly enough. Jon quickly got up to speed, asked the right questions about our equipment and provided great programming and training. Jon is professional, responsive, and a pleasure to work with; he even created a step by step guide for us. Highly recommend—reach out to Jon without hesitation!"
+        </p>
+        <div class="review-source">— Kyle, Manufacturing Operations, Northwest Ohio</div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">Google Reviews</div>
+        <p>
+          More customer feedback will be added here as additional Google reviews come in. This section is manually updated so the review text stays accurate and does not rely on a paid third-party widget.
+        </p>
+        <div class="review-source">— Colotti Automation LLC</div>
+      </div>
+
+    </div>
+
+    <div class="review-actions">
+      <a href="https://www.google.com/search?q=Colotti+Automation+LLC" target="_blank" rel="noopener" class="btn btn-primary">
+        Read Google Reviews
+      </a>
+
+      <a href="https://g.page/r/CfWXMIjqYvGLEAE/review" target="_blank" rel="noopener" class="btn btn-secondary">
+        Leave a Google Review
+      </a>
+    </div>
+
   </div>
 </section>
 
