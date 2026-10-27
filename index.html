@@ -421,6 +421,7 @@
     }
 
     .field input,
+    .field select,
     .field textarea{
       width:100%;
       border:1px solid #cfd8e3;
@@ -429,6 +430,8 @@
       font-size:16px;
       font-family:Arial, sans-serif;
     }
+
+    .field select{background:white;color:#1f2a44;}
 
     .field textarea{
       min-height:170px;
@@ -1084,9 +1087,51 @@
           </div>
 
           <div class="field">
+            <label for="company">Company name (optional)</label>
+            <input type="text" id="company" name="company" autocomplete="organization" maxlength="120">
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40">
+          </div>
+
+          <div class="field">
+            <label for="location">Project city and state (optional)</label>
+            <input type="text" id="location" name="project_location" placeholder="e.g., Toledo, OH" maxlength="120">
+          </div>
+
+          <div class="field">
+            <label for="support-type">Type of support</label>
+            <select id="support-type" name="support_type" required>
+              <option value="" selected disabled>Select a service</option>
+              <option value="PLC troubleshooting / machine downtime">PLC troubleshooting / machine downtime</option>
+              <option value="Machine vision / inspection">Machine vision / inspection</option>
+              <option value="Controls programming / equipment integration">Controls programming / equipment integration</option>
+              <option value="Robotics / machine automation">Robotics / machine automation</option>
+              <option value="Colotti Pulse demonstration / monitoring">Colotti Pulse demonstration / monitoring</option>
+              <option value="Restaurant automation concept / pilot">Restaurant automation concept / pilot</option>
+              <option value="Other / not sure">Other / not sure</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="urgency">When do you need support?</label>
+            <select id="urgency" name="urgency" required>
+              <option value="" selected disabled>Select timing</option>
+              <option value="Equipment down / urgent">Equipment down / urgent</option>
+              <option value="Within one week">Within one week</option>
+              <option value="Planned project / flexible">Planned project / flexible</option>
+              <option value="General inquiry">General inquiry</option>
+            </select>
+          </div>
+
+          <div class="field">
             <label for="message">What do you need help with?</label>
             <textarea id="message" name="message" placeholder="Describe the equipment, production issue, controls concern, machine behavior, or project details." required></textarea>
           </div>
+
+          <p style="font-size:14px;color:#526176;margin-bottom:16px">For urgent equipment downtime, please include the machine type, fault details, and a callback number. Submission does not guarantee immediate availability.</p>
 
           <button type="submit" class="btn btn-primary">
             Send Request
